@@ -6,7 +6,8 @@ if __name__ == '__main__':
     consumer = KafkaConsumer(
         'testkafka',
         bootstrap_servers='kafka:9092',
-        auto_offset_reset='earliest'
+        auto_offset_reset='earliest',
+        group_id='dnstudent',
     )
     for message in consumer:
         my_bytes_value = message.value
