@@ -81,9 +81,9 @@ services:
       - "8001:8001"
       - "8002:8002"
     volumes:
-      - ./triton-server-yolo:/app
+      - ./triton-server-yolo-example:/app
       - ${PWD}:/workspace
-    working_dir: /apps
+    working_dir: /app
     tty: true
     stdin_open: true
     networks:
@@ -91,10 +91,10 @@ services:
 
   triton_client:
     build:
-      context: ./triton-client-yolo
+      context: ./triton-client-yolo-example
       dockerfile: Dockerfile
     volumes:
-      - ./triton-client-yolo:/app
+      - ./triton-client-yolo-example:/app
       - ${PWD}:/workspace
     depends_on:
       - kafka
