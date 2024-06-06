@@ -115,6 +115,8 @@ Example client can be found in client.py. It can run dummy input, images and vid
 
 ```bash
 python3 client.py image data/dog.jpg  -o data/dog.out.jpg
+
+python3 client.py image data/dog.jpg  -m yolov7x -o data/dog.yolo7x_out.jpg
 ```
 
 ![exemplary output result yolov9-e](data/dog_yolov9-e.jpg)
