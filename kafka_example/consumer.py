@@ -9,6 +9,7 @@ if __name__ == '__main__':
         auto_offset_reset='earliest',
         group_id='dnstudent',
     )
+    print("Success start Kafka Consumer")
     for message in consumer:
         my_bytes_value = message.value
         my_json = my_bytes_value.decode('utf8').replace("'", '"')

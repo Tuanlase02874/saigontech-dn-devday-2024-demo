@@ -19,7 +19,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('mode',
                         choices=['dummy', 'image', 'video'],
-                        default='dummy',
+                        default='image',
                         help='Run mode. \'dummy\' will send an emtpy buffer to the server to test if inference works. \'image\' will process an image. \'video\' will process a video.')
     parser.add_argument('input',
                         type=str,
@@ -45,7 +45,7 @@ if __name__ == '__main__':
                         '--url',
                         type=str,
                         required=False,
-                        default='localhost:8001',
+                        default='triton-server:8001',
                         help='Inference server URL, default localhost:8001')
     parser.add_argument('-o',
                         '--out',

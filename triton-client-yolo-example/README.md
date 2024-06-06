@@ -114,7 +114,7 @@ Start Triton Server in Inference Mode [triton-server-using-models-for-inference-
 Example client can be found in client.py. It can run dummy input, images and videos.
 
 ```bash
-python3 client.py image --model yolov9-e data/dog.jpg
+python3 client.py image data/dog.jpg  -o data/dog.out.jpg
 ```
 
 ![exemplary output result yolov9-e](data/dog_yolov9-e.jpg)

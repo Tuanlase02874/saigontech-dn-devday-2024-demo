@@ -37,7 +37,7 @@ if __name__ == '__main__':
     while True:
         # Generate a message
         model_index += 1
-        dummy_message = generate_message(user =f'{random_name}', model =f'model_{model_index}')
+        dummy_message = generate_message(user =f'{random_name}', model =f'model_producer2_{model_index}')
         
         # Send it to our 'messages' topic
         print(f'Producing message @ {datetime.now()} | Message = {str(dummy_message)}')
